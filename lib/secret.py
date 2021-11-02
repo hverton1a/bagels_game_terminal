@@ -9,8 +9,8 @@ class Secret_Number:
         result = False
         if len(guess) == len(self.secret):
             result = True
-            for i in range(len(guess)):
-                if guess[i] != self.secret[i]:
+            for digit in range(len(guess)):
+                if guess[digit] != self.secret[digit]:
                     result = False
                     break
         return result
@@ -19,10 +19,10 @@ class Secret_Number:
     def check_guess(self, guess):
         result = []
 
-        for i in range(len(guess)):
-            if guess[i] == self.secret[i]:
+        for digit in range(len(guess)):
+            if guess[digit] == self.secret[digit]:
                 result.append("Fermi")
-            elif guess[i] in self.secret:
+            elif guess[digit] in self.secret:
                 result.append("Pico")
 
         if len(result) == 0:
