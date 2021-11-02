@@ -15,7 +15,7 @@ def play_bagels(num_of_digits=3, max_attempts=10):
     print('Bagels is a logical guessing game, where you try to hit a secret number.\n',
             'You have a limited ammount of attempts.\n',
             'For each digit that match a digit in the secret number,\n but is not in the',
-            'right position you receive "Pico"..',
+            'right position you receive "Pico".\n',
             'If happens to be in the right position too you receive "Fermi" instead.\n',
             'If you are complete wrong you receive "Bagels"!\n')
     print(f"Good Luck!\n For tis game you have {max_attempts} attempts\n\n")
