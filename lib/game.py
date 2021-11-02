@@ -18,3 +18,6 @@ class Game:
 
     def run_out_attempts(self, player_attempts):
         return player_attempts >= self.max_attempts
+
+    def get_max_attempts(self):
+        return self.max_attempts

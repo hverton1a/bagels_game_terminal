@@ -33,7 +33,8 @@ def play_bagels(num_of_digits=3, max_attempts=10):
             game.win(secret_number.secret)
             break
         else:
-            print(f"Guess #{str(player.get_num_attempts())}\n")
+            remaining = game.get_max_attempts() - player.get_num_attempts()
+            print(f"Guess #{str(player.get_num_attempts())} ({remaining} remain)\n")
             print(secret_number.check_guess(player.guess),'\n')
 
         if game.run_out_attempts( player.get_num_attempts()):
@@ -59,7 +60,7 @@ if __name__ == '__main__':
     if(len(sys.argv)>1):
         try:
             if sys.argv[1] != None and sys.argv[1].isdigit():
-                num_of_digits = int(sys.argv[2])
+                num_of_digits = int(sys.argv[1])
 
             if sys.argv[2] != None and sys.argv[2].isdigit():
                 max_attempts = int(sys.argv[2])
