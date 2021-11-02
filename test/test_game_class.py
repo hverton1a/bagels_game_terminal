@@ -10,7 +10,8 @@ class Bagles_Game_Test(unittest.TestCase):
         for i in range(1,4):
             num_of_digits = random.choice(range(3,10))
             max_attempts = random.choice(range(10,20))
-            game = Game(max_attempts, num_of_digits)
+
+            game = Game(num_of_digits, max_attempts)
             self.assertEqual(game.num_of_digits, num_of_digits)
             self.assertEqual(game.max_attempts, max_attempts)
 
@@ -24,9 +25,10 @@ class Bagles_Game_Test(unittest.TestCase):
     @patch('builtins.print')
     def test_game_method_win(self, mock_print):
         game = Game()
-        secret = 123
+        guess = '123'
+        secret = [int(n) for n in guess]
         game.win(secret)
-        mock_print.assert_called_with(f'Congratulations you have hit the Secret Number {secret}.')
+        mock_print.assert_called_with(f'Congratulations you have hit the Secret Number {guess}.')
 
 
     def test_game_method_run_out_attempts_return_true(self):

@@ -5,17 +5,18 @@ from lib.player import *
 from lib.secret import *
 
 
-def play_bagels():
-    game = Game()
-    secret_number = Secret_Number()
-    player = Player()
+def play_bagels(num_of_digits=3, max_attempts=10):
+
+    game = Game(num_of_digits, max_attempts)
+    secret_number = Secret_Number(num_of_digits)
+    player = Player(num_of_digits)
 
     print(f'Take a guess of a {game.num_of_digits} digit(s) number.\n')
     print(f"Guess #0")
 
     while True:
 
-        player.take_a_guess(game.num_of_digits)
+        player.take_a_guess()
         if player.is_quitting():
             game.quit()
 
@@ -43,4 +44,18 @@ def play_bagels():
 
 
 if __name__ == '__main__':
-    play_bagels()
+    num_of_digits = 3
+    max_attempts = 10
+
+    if(len(sys.argv)>1):
+        try:
+            if sys.argv[1] != None and sys.argv[1].isdigit():
+                num_of_digits = int(sys.argv[2])
+
+            if sys.argv[2] != None and sys.argv[2].isdigit():
+                max_attempts = int(sys.argv[2])
+        except:
+            pass
+
+
+    play_bagels(num_of_digits, max_attempts)
