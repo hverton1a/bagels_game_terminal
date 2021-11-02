@@ -30,4 +30,4 @@ the player still have attempts.
 Also use the simplicity of this project to set some automatic tests with unittest and pytest.
 ![Test report](https://github.com/hverton1a/bagels_game_terminal/blob/main/assets/tests.gif)
 
-[Try it live on Replit!](https://replit.com/@Horvatbarbosa/rockpaperscissorterminal?v=1)
+[Try it live on Replit!](https://replit.com/@Horvatbarbosa/bagelsgameterminal?v=1)
