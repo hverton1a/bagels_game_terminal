@@ -18,7 +18,7 @@ def play_bagels(num_of_digits=3, max_attempts=10):
             'right position you receive "Pico".\n',
             'If happens to be in the right position too you receive "Fermi" instead.\n',
             'If you are complete wrong you receive "Bagels"!\n')
-    print(f"Good Luck!\n For tis game you have {max_attempts} attempts\n\n")
+    print(f'Good Luck!\n For this game you have {max_attempts} attempts\n\n')
 
     print(f'Take a guess of a {game.num_of_digits} digit(s) number.\n')
     print(f"Guess #0")
