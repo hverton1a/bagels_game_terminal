@@ -13,6 +13,7 @@ class Game:
         sys.exit()
 
     def win(self, secret):
+        secret_num = " ".join(secret)
         print(f'Congratulations you have hit the Secret Number {secret}.')
 
     def run_out_attempts(self, player_attempts):

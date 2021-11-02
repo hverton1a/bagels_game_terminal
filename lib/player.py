@@ -8,10 +8,10 @@ class Player:
         self.guess = None
 
         while not self.guess:
-            print(f'Insert a {number_of_digits} digit(s) number guess.\n')
-            input_guess = input()
+            #print(f'Take a guess of a {number_of_digits} digit(s) number.\n')
+            input_guess = input('->')
             input_guess = input_guess.strip().lower()
-
+            print('\n')
             if input_guess == 'quit':
                 self.quit = True
                 self.guess = input_guess

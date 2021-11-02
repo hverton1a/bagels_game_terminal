@@ -33,4 +33,5 @@ class Secret_Number:
 
 
     def show(self):
-        print(self.secret)
+        secret = "".join(str(n) for n in self.secret)
+        print('The secret was :',secret)
